@@ -4,7 +4,9 @@ let nameInput = document.getElementById("name");
 let nvInput = document.getElementById("nv");
 let hanchotInput = document.getElementById("hanchot");
 let ghichuInput = document.getElementById("ghichu");
-let table = document.querySelector(".custom-table");
+
+// ĐÃ SỬA: Chọn thẳng vào tbody của bảng để hàng mới không bị nhảy vào thead
+let tableBody = document.querySelector(".custom-table tbody");
 
 // Biến toàn cục để đếm số nhiệm vụ đã hoàn thành (> 15 việc)
 let completedTasks = 0;
@@ -49,8 +51,8 @@ function guithongtin() {
     );
   }
 
-  // 2. Chèn một hàng mới dựa trên vị trí (insertIndex) đã tính toán ở trên
-  let row = table.insertRow(insertIndex);
+  // 2. ĐÃ SỬA: Chèn hàng mới vào tableBody thay vì table
+  let row = tableBody.insertRow(insertIndex);
 
   // 3. Tạo 6 ô (Cột) tương ứng trong bảng (Thêm 1 cột để hiển thị giá trị MSSV)
   let cell1 = row.insertCell(0);
