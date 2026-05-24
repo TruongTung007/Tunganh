@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Trangdebug.css" />
+    <link rel="stylesheet" href="./Trangchu.html" />
+    <link rel="stylesheet" href="./Trangquanly.html" />
+    <title>Trang Debug & Khắc Phục Lỗi</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">Kiểm tra Web</a>
+        <div class="navbar-nav">
+          <a class="navbar-link" href="Trangchu.html">Trang chủ</a>
+          <a class="navbar-link" href="Trangquanly.html">Trang quản lý</a>
+          <a class="navbar-link active" href="Trangdebug.html">Trang debug</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="custom-card">
+        <h1 class="label-title">Trang Debug & Khắc Phục Lỗi</h1>
+
+        <h3 class="text-danger h6 fw-bold mt-4">
+          1. Đoạn mã nguyên văn (Bị lỗi gốc)
+        </h3>
+        <div class="p-3 rounded debug-box">
+          <pre><code>function deleteRow(index) {
+  let confirm = confirm("Bạn có chắc muốn xóa?");
+  if (confirm) {
+    listData.splice(index, 0);
+    renderTable();
+  }
+}</code></pre>
+        </div>
+
+        <h3 class="text-success h6 fw-bold mt-4">
+          2. Đoạn mã đã sửa lỗi hoàn chỉnh
+        </h3>
+        <div class="p-3 rounded debug-box">
+          <pre><code><span class="code-keyword">function</span> deleteRow(index) {
+  <span class="code-comment">// CHÚ THÍCH LỖI 1: Tránh đặt tên biến trùng tên với hàm confirm() gốc của hệ thống.</span>
+  <span class="code-comment">// Việc đặt 'let confirm = confirm(...)' gây ra lỗi xung đột đè hàm (confirm is not a function).</span>
+  <span class="code-keyword">let</span> isConfirmed = confirm("Bạn có chắc muốn xóa?");
+  
+  <span class="code-keyword">if</span> (isConfirmed) {
+    <span class="code-comment">// CHÚ THÍCH LỖI 2: Hàm .splice(index, số_lượng_cần_xóa) đang truyền tham số thứ hai là 0.</span>
+    <span class="code-comment">// Số 0 nghĩa là không xóa phần tử nào cả. Ta phải đổi thành 1 để xóa đúng bản ghi tại vị trí index.</span>
+    listData.splice(index, 1);
+    
+    renderTable(); <span class="code-comment">// Gọi lại hàm cập nhật lại giao diện bảng</span>
+  }
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

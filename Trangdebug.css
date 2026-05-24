@@ -1,0 +1,153 @@
+body {
+  background-color: #0f172a !important; /* Nền tối sâu hiện đại (Slate 900) */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f8fafc; /* Chữ màu trắng sáng */
+  margin: 0;
+  padding-bottom: 60px;
+}
+
+/* Hộp bo góc chứa nội dung chính */
+.custom-card {
+  background: #1e293b; /* Màu xám tối nhẹ hơn nền body (Slate 800) */
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+  border: 1px solid #334155; /* Viền mỏng tinh tế */
+}
+
+/* Định dạng tiêu đề trang */
+.label-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #38bdf8; /* Màu xanh Sky Neon công nghệ */
+  border-left: 6px solid #38bdf8;
+  padding-left: 15px;
+  margin-bottom: 30px;
+}
+
+/* Tiêu đề mục code đúng / code sai */
+h3.h6 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Cấu hình màu chữ Bootstrap cơ bản cho Dark Mode */
+.text-danger {
+  color: #f43f5e !important; /* Đỏ hồng dịu mắt, không bị chói */
+}
+.text-success {
+  color: #34d399 !important; /* Xanh ngọc bích dễ nhìn */
+}
+
+/* ==========================================================================
+   KHỐI HIỂN THỊ CODE (MÔ PHỎNG EDITOR VÀ CÚ PHÁP)
+   ========================================================================== */
+
+/* Hộp bọc ngoài khối code (Editor Window) */
+.debug-box {
+  background-color: #0b0f19 !important; /* Nền đen tuyền của trình biên dịch */
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px !important;
+  position: relative;
+}
+
+/* Giữ nguyên định dạng khoảng cách của Code */
+pre {
+  margin: 0;
+  overflow-x: auto; /* Tự động xuất hiện thanh cuộn ngang nếu code quá dài */
+}
+
+/* Định dạng font chữ lập trình */
+code {
+  font-family: "Fira Code", "Consolas", "Courier New", Courier, monospace;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #cbd5e1; /* Màu chữ code mặc định */
+}
+
+/* Hiệu ứng màu cú pháp (Syntax Highlighting) */
+
+/* 1. Các từ khóa hệ thống: function, let, if... */
+.code-keyword {
+  color: #f43f5e; /* Màu hồng đỏ rực rỡ */
+  font-weight: 600;
+}
+
+/* 2. Các dòng giải thích lỗi (Comments): //... */
+.code-comment {
+  color: #64748b; /* Màu xám mờ để phân biệt với code chạy */
+  font-style: italic;
+}
+
+/* ==========================================================================
+   ĐỒNG BỘ THANH MENU ĐIỀU HƯỚNG NẰM NGANG
+   ========================================================================== */
+nav.navbar {
+  background-color: #0b0f19 !important;
+  border-bottom: 1px solid #1e293b;
+  padding: 15px 0;
+}
+
+nav.navbar .container {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex !important;
+  flex-direction: row !important; /* Luôn xếp hàng ngang */
+  gap: 25px;
+}
+
+.navbar-link {
+  color: #94a3b8 !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Màu sáng lên khi rê chuột hoặc khi đang ở chính trang đó */
+.navbar-link:hover,
+.navbar-link.active {
+  color: #38bdf8 !important;
+}
+
+pre {
+  margin: 0;
+  overflow-x: auto; /* Tự động xuất hiện thanh cuộn nếu code quá dài */
+}
+
+code {
+  font-family: "Fira Code", "Courier New", Courier, monospace;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+/* Màu sắc cho các dòng chú thích (Comments) */
+code .text-comment {
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Màu sắc cho từ khóa hệ thống (Keywords) */
+code .text-keyword {
+  color: #f43f5e;
+  font-weight: 600;
+}

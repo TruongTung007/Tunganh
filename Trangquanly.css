@@ -1,0 +1,143 @@
+/* Cấu hình nền và font chữ cho toàn trang */
+body {
+  background-color: #1e222b !important; /* Màu nền tối sang trọng giống VS Code của bạn */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 50px;
+}
+
+/* Định dạng các khối nội dung bên dưới thành hộp trắng bo góc */
+div.container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  max-width: 900px; /* Giới hạn độ rộng vừa mắt */
+}
+
+/* --- PHẦN SỬA LỖI CHO THANH MENU (NAVBAR) --- */
+nav.navbar {
+  background-color: #161920 !important; /* Nền tối riêng cho navbar */
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+/* Giải cứu vùng container bên trong navbar không bị dính màu trắng */
+nav.navbar .container {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  max-width: 900px !important;
+}
+
+/* Làm đẹp cho chữ chuyển trang */
+.navbar-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Hiệu ứng sáng lên khi di chuột vào chữ menu */
+.navbar-link:hover {
+  color: #198754 !important; /* Đổi sang màu xanh lá đồng bộ với nút bấm */
+}
+.navbar-nav {
+  display: flex !important;
+  flex-direction: row !important; /* Chuyển từ hàng dọc sang hàng ngang */
+  align-items: center;
+}
+
+/* Định dạng lại các thẻ link để hiển thị dạng khối ngang */
+.navbar-link {
+  display: inline-block !important;
+  padding: 5px 15px !important; /* Tạo khoảng cách bấm cho dễ trúng */
+  margin-left: 10px !important; /* Khoảng cách giữa các chữ */
+  white-space: nowrap; /* Ngăn không cho chữ bị rớt dòng */
+}
+/* ------------------------------------------- */
+
+/* Tiêu đề */
+.label,
+.table-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #198754;
+  margin-bottom: 25px;
+  border-left: 5px solid #198754;
+  padding-left: 15px;
+}
+
+/* Định dạng các ô nhập liệu (ĐÃ THÊM #mssv VÀO ĐÂY) */
+#mssv,
+#name,
+#nv,
+#hanchot,
+#ghichu {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  box-sizing: border-box; /* Đảm bảo padding không làm tràn khung */
+}
+
+/* Hiệu ứng viền xanh khi click vào các ô nhập liệu (ĐÃ THÊM #mssv VÀO ĐÂY) */
+#mssv:focus,
+#name:focus,
+#nv:focus,
+#hanchot:focus,
+#ghichu:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+  outline: none;
+}
+
+/* Nút bấm gửi thông tin */
+.ketqua {
+  text-align: left; /* Căn trái giống trong ảnh của bạn */
+  margin-top: 5px;
+}
+.ketqua button {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.ketqua button:hover {
+  background-color: #157347;
+}
+
+/* Làm đẹp bảng hiển thị danh sách */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.custom-table thead {
+  background-color: #198754;
+  color: #ffffff;
+}
+.custom-table th,
+.custom-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+.custom-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Thêm căn giữa cho cột chứa ô tích hoàn thành (nếu cần) */
+.text-center {
+  text-align: center;
+}
