@@ -1,8 +1,13 @@
 /* Cấu hình nền và font chữ cho toàn trang */
 body {
-  background-color: #1e222b !important; /* Màu nền tối sang trọng giống VS Code của bạn */
+  background-color: #1e222b !important; /* Màu nền tối sang trọng giống VS Code */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 50px;
+  
+  /* --- ĐOẠN SỬA LỖI ĐÈ CLASS CỦA BODY HTML --- */
+  color: #212529 !important; /* Trả lại màu chữ tối mặc định cho nội dung bên dưới */
+  border: none !important;    /* Xóa viền nút bấm bị áp đặt từ body */
+  display: block !important;  /* Đảm bảo layout hiển thị bình thường */
 }
 
 /* Định dạng các khối nội dung bên dưới thành hộp trắng bo góc */
