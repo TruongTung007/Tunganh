@@ -73,7 +73,7 @@ function guithongtin() {
 function kiemTraHieuQua(checkboxElement) {
     if (checkboxElement.checked) {
         completedTasks++; 
-        if (completedTasks > 15) {
+        if (completedTasks > 2) {
             alert("Nhóm đang làm việc rất hiệu quả!"); 
         } 
     } else {
