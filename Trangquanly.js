@@ -1,9 +1,9 @@
-// Lấy các phần tử Input từ giao diện HTML
-const mssvInput = document.getElementById("mssv"); 
-const nameInput = document.getElementById("name"); 
-const nvInput = document.getElementById("nv"); 
-const hanchotInput = document.getElementById("hanchot"); 
-const ghichuInput = document.getElementById("ghichu"); 
+
+let mssvInput = document.getElementById("mssv"); 
+let nameInput = document.getElementById("name"); 
+let nvInput = document.getElementById("nv"); 
+let hanchotInput = document.getElementById("hanchot"); 
+let ghichuInput = document.getElementById("ghichu"); 
 
 let completedTasks = 0; 
 
@@ -64,8 +64,8 @@ function guithongtin() {
     ghichuInput.value = ""; 
 } 
 
-
 function kiemTraHieuQua(checkboxElement) {
+    let thongbaoElement = document.getElementById("thong-bao-hieu-qua")
     if (checkboxElement.checked) {
         completedTasks++; 
         if (completedTasks > 1) {
