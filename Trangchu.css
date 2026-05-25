@@ -11,7 +11,7 @@
   object-fit: cover; /* Cắt gọn ảnh để khuôn mặt không bị kéo giãn */
 }
 
-/* 3. Tùy chỉnh nhỏ giúp giao diện mượt mà hơn (Không bắt buộc) */
+/* 3. Tùy chỉnh nhỏ giúp giao diện mượt mà hơn */
 .card {
   transition:
     transform 0.2s ease,
